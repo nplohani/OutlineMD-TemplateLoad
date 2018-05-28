@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>OutlineMD Master Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap-4.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome for icons -->
+  <link href="/assets/vendor/fontawesome-free-5.0.12/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+
+  <!-- MDoutline Base CSS -->
+  <link href="/assets/css/base.css" rel="stylesheet">
+
+  <!-- Page specific CSS -->
+    <link href="/assets/css/master-template-list.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+
+        <!-- LOGO -->
+        <img src="/assets/img/utas-logo-black.png" class="site-logo" />
+        <h4 class="my-0 mr-md-auto font-weight-normal site-header">Unit Outline Editing System</h4>
+
+        <!-- MENU {-->
+        <nav class="my-2 my-md-0 mr-md-3" id="header-menu">
+            <a class="btn text-dark" href="#">Unit List</a>
+            <a class="btn text-dark current" href="#">Master Template List</a>
+            <a class="btn text-dark" href="/views/master-template-editor.html?">Template Editor</a>
+        </nav>
+
+        <a class="btn btn-outline-utas-red" href="#">
+            <i class="fas fa-sign-out-alt"></i> Logoff
+        </a>
+        <!-- } MEMU -->
+    </div>
+
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <!-- PAGE HEADER{ -->
+        <h1>Master Template Lists</h1>
+
+        <!-- }PAGE HEADER -->
+
+    </div>
+
+    <div class="container" id="main-wrapper">
+
+        <!-- SEARCH BAR {-->
+
+        <div class="input-group justify-content-between mb-3 ">
+            <input type="text" class="form-control" placeholder="search template version" aria-label="Search" aria-describedby="searchText">
+            <div class="input-group-prepend">
+                <a class="btn btn-search-bar-search" type="submit"><i class="fas fa-search"></i>Search</a>
+                <a class="btn btn-search-bar-clean" type="reset"><i class="fas fa-times"></i>Clean</a>
+            </div>
+            <div class="col-2">
+                <a class="btn btn-utas-gray" href="/views/master-template-editor.html?">Add New Template</a>
+            </div>
+        </div>
+        <!-- }SEARCH BAR -->
+        <!-- ****************** MAIN CONTENT AREA ********************** { -->
+        <!-- {Table List of Master Template -->
+        <table id="masterTemplateList" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Version</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Creation Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Modification</th>
+                </tr>
+            </thead>
+        </table>
+        <!-- } Table List of Master Template -->
+        <!-- Paging { -->
+        <div class="mb-5">
+            <nav aria-label="Page navigation" class="outlineMD-paging">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- } Paging -->
+        <!-- } ***************** MAIN CONTENT AREA **********************  -->
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div>
+            <small style="text-align: center;" class="d-block mb-3 text-muted">&copy; 2018 - 2019 University of Tasmania</small>
+        </div>
+    </footer>
+    </div>
+
+    <!--jQuery Library-->
+    <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/assets/vendor/bootstrap-4.1.1/js/bootstrap.bundle.min.js"></script>
+
+    <!--include script file-->
+    <script src="/app/js/master-template-list.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+/*******************************/
+/*       GENERIC ELEMENTS      */
+/*******************************/
+
+* :not(.tablinks) {
+    border-radius: 0 !important;
+}
+* :not(.modalDialog) {
+    border-radius: 0 !important;
+}
+* :not(.modalDialog2) {
+    border-radius: 0 !important;
+}
+
+
+body {
+    font-family: Montserrat, sans-serif;
+    color: #474747;
+}
+
+a.current {
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+
+
+/*******************************/
+/*           Class             */
+/*******************************/
+.card-deck .card {
+    min-width: 220px;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.site-logo {
+    height: 32px;
+}
+
+.site-header {
+    padding-left: 3em;
+}
+
+.btn-utas-black {
+    border: 0;
+    background-color: #000;
+    color: white;
+}
+
+.btn-utas-black:hover {
+    background-color: #474747;
+    color: white;
+}
+
+.btn-utas-red {
+    border: 0;
+    background-color: #e32213;
+    color: white;
+}
+
+.btn-utas-red:hover {
+    background-color: #b41b0f;
+}
+
+.btn-utas-gray {
+    border: 0;
+    background-color: #474747;
+    color: white;  
+}
+
+.btn-utas-gray:hover {
+    background-color: #c7c7c7;
+    color: #474747;
+}
+
+.btn-outline-utas-red {
+    border: none;
+    color: #b41b0f;
+}
+
+.btn-outline-utas-red:hover {
+    background-color: #b41b0f;
+    color: #fff;
+}
+
+
+
+.outlineMD-paging .page-link {
+    color: #b41b0f;
+    border: none;
+}
+
+.badge-utas-gray {
+    background-color: #474747!important;
+    color: white;
+}
+
+
+
+
+
+/*******************************/
+/*             ID              */
+/*******************************/
+
+#header-menu a:hover {
+    border-bottom: 2px solid #000;
+}

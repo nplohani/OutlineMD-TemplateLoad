@@ -1,0 +1,189 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>OutlineMD Master Template Editor</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap-4.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome for icons -->
+  <link href="/assets/vendor/fontawesome-free-5.0.12/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+
+  <!-- MDOutline Base CSS -->
+  <link href="/assets/css/base.css" rel="stylesheet">
+
+  <!-- Page specific CSS -->
+  <link href="/assets/css/master-template-editor.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+
+        <!-- LOGO -->
+        <img src="/assets/img/utas-logo-black.png" class="site-logo" />
+        <h4 class="my-0 mr-md-auto font-weight-normal site-header">Unit Outline Editing System</h4>
+
+        <!-- MENU {-->
+        <nav class="my-2 my-md-0 mr-md-3" id="header-menu">
+            <a class="btn text-dark" href="#">Unit List</a>
+            <a class="btn text-dark" href="/">Master Template List</a>
+            <a class="btn text-dark current" href="/views/master-template-editor.html">Template Editor</a>
+        </nav>
+
+        <a class="btn btn-outline-utas-red" href="#">
+            <i class="fas fa-sign-out-alt"></i> Logoff
+        </a>
+        <!-- } MENU -->
+    </div>
+
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <!-- PAGE HEADER{ -->
+        <h1>Master Template Editor</h1>
+        <!-- }PAGE HEADER -->
+    </div>
+
+    <div class="container" id="main-wrapper">
+
+        <!-- DROP DOWN SELECT { -->
+        <div class="input-group mb-3 col-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Status</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Select status</option>
+                <option value="1">Editng</option>
+                <option value="2">Completed</option>
+            </select>
+        </div>
+
+        <!-- } DROP DOWN SELECT -->
+        <!-- ****************** MAIN CONTENT AREA ********************** { -->
+        <!--The div that stores each of the sections (tabs). The statically created button is for the 'Add Tab' button.-->
+        <div class="tab" id="myTab">
+            <a href="?#openModal"><button id="addTab" class="tablinks" onClick="reply_click()">+Add</button></a>
+        </div>
+
+        <!--The div that stores each of the sections' contents. The statically created tab contents is to ensure that more contents can be added onto it. Should NOT be deleted unless changes are made to the current code.-->
+        <div class="tab-content" id="here">
+            <div id="Tab1" class="tabcontent">
+                <div class="dropdown" id="dd1">
+                    <button onclick="subSectionMenu(1)" style="background: url(/assets/img/menuIcon.png)" class="dropbtn"> </button>
+                    <div id="myDropdown1" class="dropdown-content">
+                        <a onclick="addSubSection(1)" href="#subSectionModal"> Add </a>
+                        <a onclick="editSection(1)" href="#editSectionModal"> Edit </a>
+                        <a href="#"> Delete </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--The code for what appears in the popup to add a section name initially.-->
+        <div id="openModal" class="modalDialog">
+            <div>
+                <form>
+                    <label class="label-popup">Please enter a header name</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="inputSectionName" autocomplete="off">
+                        <a class="btn btn-editor-save-popup" id="changeSectionName" href="#">Save</a>
+                        <a class="btn btn-editor-cancel-popup" id="cancelSectionName" href="#">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- The code for what appears when editing a tab heading-->
+        <div id="editSectionModal" class="modalDialog3">
+            <div>
+                <form>
+                    <label class="label-popup">Please enter a new header name for the tab</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="inputNewSectionName" autocomplete="off">
+                        <a class="btn btn-editor-save-popup" id="changeNewSectionName" href="#">Save</a>
+                        <a class="btn btn-editor-cancel-popup" id="cancelNewSectionName" href="#">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- The code for what appears when editing a subsection heading-->
+        <!--<div id="editSubSectionModal" class="modalDialog4">
+        <div>
+            <h4>Please enter a new header name for the </h4>
+            <form>
+                <input class="test" type="text" id="inputNewSectionName" autocomplete="off"> <br>
+                <a href="#"><input id="changeNewSectionName" type="submit" value="Save"></a>
+                <a href="#"><input id="cancelNewSectionName" type="submit" value="Cancel"></a>
+            </form>
+        </div>
+    </div>-->
+        <!-- Add Learning Outcome {-->
+        <!-- <div class="row">
+        <div class="col-md-12 pb-md-2">
+            <a class="btn btn-editor-add" href="#" onclick="EditorFunc.addNewEditorBlock();">Add</a>
+        </div>
+    </div>-->
+        <!--  <div id="editors-wrapper">
+    <!-- pass the dynamic learning outcome blocks into the div -->
+        <!-- </div>-->
+        <!-- <div class="row">
+                <div class="col-md-12 pb-md-2">
+                    <a class="btn btn-editor-save" href="#" onclick="EditorFunc.saveLearningOutcome();">Save</a>
+                </div>
+            </div>-->
+        <!-- } Add Learning Outcome -->
+
+        <!--The code for what appears in the popup to add a SubSection name initially.-->
+        <div id="subSectionModal" class="modalDialog2">
+            <div>
+                <form>
+                    <label class="label-popup">Please enter a Subsection Header name</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="inputSubSectionName" autocomplete="off">
+                        <a class="btn btn-editor-save-popup" id="changeSubSectionName" href="#">Save</a>
+                        <a class="btn btn-editor-cancel-popup" id="cancelSubSectionName" href="#">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- { Save and Cancel button for the editor page -->
+        <div class="row">
+            <div class="col-md-12 pb-md-2 offset-md-7">
+                <a class="btn btn-editor-page" href="#" onclick="">Save Template</a>
+                <a class="btn btn-editor-page" href="#" onclick="">Cancel</a>
+            </div>
+        </div>
+        <!-- } Save and Cancel button for the editor page -->
+        <!-- } ***************** MAIN CONTENT AREA **********************  -->
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div>
+            <small style="text-align: center;" class="d-block mb-3 text-muted">&copy; 2018 - 2019 University of Tasmania</small>
+        </div>
+    </footer>
+
+
+    <!--jQuery Library-->
+    <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+
+
+    <!--Web page JavaScript-->
+    <script src="/app/js/master-template-editor.js" type="text/JavaScript"></script>
+    <script src="/app/js/master-editor-tab-And-acc.js" type="text/JavaScript"></script>
+
+    <!--Add data file-->
+    <script src="/app/js/master-template-data.js"></script>
+
+
+
+</body>
+
+</html>

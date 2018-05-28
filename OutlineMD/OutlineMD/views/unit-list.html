@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>OutlineMD Unit List</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/vendor/bootstrap-4.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome for icons -->
+  <link href="assets/vendor/fontawesome-free-5.0.12/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+
+  <!-- MDoutline Base CSS -->
+  <link href="assets/css/base.css" rel="stylesheet">
+
+  <!-- Page specific CSS -->
+ 
+</head>
+
+<body>
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+
+    <!-- LOGO -->
+    <img src="../assets/img/utas-logo-black.png" class="site-logo" />
+    <h4 class="my-0 mr-md-auto font-weight-normal site-header">Unit Outline Editing System</h4>
+
+    <!-- MENU {-->
+    <nav class="my-2 my-md-0 mr-md-3" id="header-menu">
+      <a class="btn text-dark" href="unit-list.html">Unit List</a>
+      <a class="btn text-dark current" href="master-template-list.html">Master Template List</a>
+      <a class="btn text-dark" href="master-template-editor.html">Template Editor</a>
+    </nav>
+
+    <a class="btn btn-outline-utas-red" href="#">
+      <i class="fas fa-sign-out-alt"></i> Logoff</a>
+    <!-- } MEMU -->
+  </div>
+
+  <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <!-- PAGE HEADER{ -->
+    <h1>Unit Outline Lists</h1>
+    
+    <!-- }PAGE HEADER -->
+    
+  </div>
+
+  <div class="container" id="main-wrapper">
+    
+ <!-- SEARCH BAR {-->
+
+  <div class="input-group justify-content-between mb-3 ">
+      <input type="text" class="form-control" placeholder="search unit outlines" aria-label="Search" aria-describedby="searchText">
+      <div class="input-group-prepend">
+        <a class="btn" type="submit"><i class="fas fa-search"></i>Search</a>
+        <a class="btn" type="reset"><i class="fas fa-times"></i>Clean</a>
+      </div>
+      <div class="col-2">
+          <a class="btn btn-utas-gray" href="#">Add New Template</a>  
+      </div>
+  </div>
+  <!-- }SEARCH BAR -->
+
+
+
+    <!-- ****************** MAIN CONTENT AREA ********************** { -->
+     <!-- {Table List of Unit Outlines -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Unit Code</th>
+            <th scope="col">Unit Title</th>
+            <th scope="col">Unit Coordinator</th>
+            <th scope="col">Teaching Period</th>
+            <th scope="col">Year</th>
+            <th scope="col">Status</th>
+            <th scope="col">Modify</th>
+            <th scope="col">Approval</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">KIT101</th>
+            <td>Programming Fundamentals</p></td>
+            <td>James</td>
+            <td>Semester 1</td>
+            <td>2017</td>
+            <td>Approved</td>
+            <td><a href="" onclick="">Edit</a></td>
+            <td><input type="checkbox" value="Approve"></td>
+          </tr>
+          <tr>
+            <th scope="row">KIT103</th>
+            <td>Computational Science</p></td>
+            <td>Julian</td>/
+            <td>Semester 1</td>
+            <td>2017</td>
+            <td>Approved</td>
+            <td><a href="" onclick="">Edit</a></td>
+            <td><input type="checkbox" value="Approve"></td>
+          </tr>
+          <tr>
+            <th scope="row">KIT103</th>
+            <td>Computational Science</p></td>
+            <td>Matthew</td>
+            <td>Semester 1</td>
+            <td>2017</td>
+            <td>Review</td>
+            <td><a href="" onclick="">Edit</a></td>
+            <td><input type="checkbox" value="Approve"></td>
+          </tr>
+          <tr>
+            <th scope="row">KIT105</th>
+            <td>ICT Professional Practices</p></td>
+            <td>Nicole</td>
+            <td>Semester 1</td>
+            <td>2017</td>
+            <td>Review</td>
+            <td><a href="" onclick="">Edit</a></td>
+            <td><input type="checkbox" value="Approve"></td>
+          </tr>
+          <tr>
+            <th scope="row">KIT106</th>
+            <td>ICT Impact and Emerging Technology</p></td>
+            <td>Kelly</td>
+            <td>Semester 1</td>
+            <td>2018</td>
+            <td>Editing</td>
+            <td><a href="" onclick="">Edit</a></td>
+            <td><input type="checkbox" value="Approve"></td>
+          </tr>
+          <tr>
+            <th scope="row">KIT107</th>
+            <td>Programming</p></td>
+            <td>Julian</td>
+            <td>Semester 1</td>
+            <td>2018</td>
+            <td>Aprroved</td>
+            <td><a href="" onclick="">Edit</a></td>
+            <td><input type="checkbox" value="Approve"></td>
+          </tr>
+          <tr>
+            <th scope="row">KIT108</th>
+            <td>Artificial Intelligent</p></td>
+            <td>Herry</td>
+            <td>Semester 1</td>
+            <td>2018</td>
+            <td>Pending</td>
+            <td><a href="" onclick="">Edit</a></td>
+            <td><input type="checkbox" value="Approve"></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- } Table List of  Unit Outlines -->
+
+      <!-- Paging { -->
+    <div class="mb-5">
+      <nav aria-label="Page navigation" class="outlineMD-paging">
+        <ul class="pagination justify-content-end">
+          <li class="page-item">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- } Paging -->
+
+
+    <!-- } ***************** MAIN CONTENT AREA **********************  -->
+  </div>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div>
+      <small style="text-align: center;" class="d-block mb-3 text-muted">&copy; 2018 - 2019 University of Tasmania</small>
+    </div>
+  </footer>
+  </div>
+
+  <!--jQuery Library-->
+  <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="assets/vendor/bootstrap-4.1.1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MY App</title>
+        <body>
+<ul class="outline">
+    <% for(var i = 0; i<outline.length; i++) {%>
+        <li class="outline">
+            <span><%= outline[i].unitID %></span>
+            <span><%= outline[i].name %></span>
+            <span><%= outline[i].UC %></span>
+        </li>
+        <%} %>
+</ul>
+
+
+            <form action="/outline" method="POST">
+            <input type="text" placeholder="unitID" name="unitID">
+            <input type="text" placeholder="name" name="name">
+            <input type="text" placeholder="UC" name="UC">
+            <button type="submit" value="Submit">Submit</button>
+        </body>
+</html>
